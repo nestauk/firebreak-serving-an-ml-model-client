@@ -4,4 +4,4 @@ A simple client side app to make use of the [Mapping Career Causways](https://gi
 
 ## Building CSS
 
-Assuming you have [NodeJS](https://nodejs.org) installed, you can run `npm run build-css` to generate a `style.css` file in the `dist` directory. This will also watch for changes to files in the `dist` directory which can be useful during development. For more information see https://tailwindcss.com.
+Assuming you have [NodeJS](https://nodejs.org) installed, you can run `npm run build-css` to generate a `style.css` file. This will also watch for changes to .html and .js files which can be useful during development. For more information see https://tailwindcss.com.
