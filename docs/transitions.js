@@ -70,5 +70,8 @@
 
       document.getElementById("results").innerHTML = resultsComponent(data);
     })
-    .catch((_err) => (window.location = "index.html#error"));
+    .catch((err) => {
+      console.log(err);
+      // (window.location = "index.html#error")
+    });
 })();
