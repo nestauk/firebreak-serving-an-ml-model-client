@@ -2950,7 +2950,7 @@
 
   for (const occupation of occupations) {
     let opt = document.createElement("option");
-    opt.value = occupation.toLowerCase().replace(" ", "-");
+    opt.value = occupation;
     opt.innerText = occupation;
     occupationSelectEl.appendChild(opt);
   }
