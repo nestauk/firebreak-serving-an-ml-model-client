@@ -34,6 +34,7 @@
             similarity: 0.664088,
           },
         ],
+        qualifications: ["qual1", "qual2"],
       },
       {
         name: "porter hotel",
@@ -58,6 +59,7 @@
             similarity: 0.664088,
           },
         ],
+        qualifications: [],
       },
       {
         name: "hotel porter",
@@ -135,6 +137,16 @@
     `;
   };
 
+  const qualificationsComponent = function (qualifications) {
+    if (qualifications === undefined || qualifications.length === 0) {
+      return "";
+    } else {
+      return `
+        Common qualifications include: ${qualifications.join(", ")}.
+      `;
+    }
+  };
+
   const resultsComponent = function (data) {
     let htmlString = "";
     for (const [i, transition] of data.entries()) {
@@ -152,6 +164,7 @@
           <div class="mt-2">
             <p class="mb-3 text-gray-600 text-sm">
               If you are interested in this occupation you will need to fill any <span class="bg-orange-100 text-orange-700">&nbsp;skill gaps&nbsp;</span> and build on <span class="bg-cyan-100 text-cyan-700">&nbsp;similar skills&nbsp;</span>.
+              ${qualificationsComponent(transition.qualifications)}
             </p>
             ${transition.skills.map((s) => skillComponent(s)).join("")}
           </div>
