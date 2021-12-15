@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "A simple client side app to make use of https://github.com/nestauk/mapping-career-causeways via an API",
   "scripts": {
-    "build-css": "npx tailwindcss -o ./dist/style.css --minify --watch"
+    "build-css": "npx tailwindcss -o ./docs/style.css --minify --watch"
   },
   "license": "MIT",
   "devDependencies": {
