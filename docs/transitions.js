@@ -71,7 +71,8 @@
       document.getElementById("results").innerHTML = resultsComponent(data);
     })
     .catch((err) => {
-      console.log(err);
-      // (window.location = "index.html#error")
+      document.getElementById("results").innerHTML = `
+        <div class="p-4 bg-red-100 text-red-700">Sorry, an error occured.</div>
+      `;
     });
 })();
